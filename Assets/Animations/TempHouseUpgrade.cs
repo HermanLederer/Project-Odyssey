@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TempHouseUpgrade : MonoBehaviour
 {
+	// Editor components
+	[SerializeField] private ParticleSystem upgradeParticles;
+
+	// Private properties
 	private float initialPosition;
 	private float velocity;
 
@@ -34,5 +38,6 @@ public class TempHouseUpgrade : MonoBehaviour
 	public void Upgrade()
 	{
 		velocity = 3f;
+		upgradeParticles.Play();
 	}
 }
