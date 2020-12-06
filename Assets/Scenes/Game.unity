@@ -522,10 +522,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 742833675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 815016c3371c88a458c12f9b3a59f02d, type: 3}
+  m_Script: {fileID: 11500000, guid: d45c30e56f156dd428fec1985ea3fd31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeParticles: {fileID: 1938977928}
+  fence: {fileID: 6994539774619156051}
 --- !u!114 &742833677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +546,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 742833676}
-          m_TargetAssemblyTypeName: TempHouseUpgrade, Assembly-CSharp
+          m_TargetAssemblyTypeName: House3, Assembly-CSharp
           m_MethodName: Upgrade
           m_Mode: 1
           m_Arguments:
@@ -587,6 +588,7 @@ Transform:
   - {fileID: 1402074674}
   - {fileID: 1448911728}
   - {fileID: 730124887}
+  - {fileID: 6994539774619156052}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1336,3 +1338,66 @@ PrefabInstance:
       objectReference: {fileID: 975681054}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37ab40add92f42b4ca99e9341321c565, type: 3}
+--- !u!1001 &6994539774619156050
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 752380342}
+    m_Modifications:
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0437717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867634295026290503, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_Name
+      value: House 3 fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867634295026290503, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+--- !u!1 &6994539774619156051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3867634295026290503, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+  m_PrefabInstance: {fileID: 6994539774619156050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6994539774619156052 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2253430652387635945, guid: 13cc94e058f1fe34abdf3fc4a389899b, type: 3}
+  m_PrefabInstance: {fileID: 6994539774619156050}
+  m_PrefabAsset: {fileID: 0}
