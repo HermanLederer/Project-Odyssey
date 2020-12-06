@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13b4fdc3478f8c642a87361c19f16905, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40c12c8d72b1a374f8847683a26cd8c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a767b2f618d54a43a1c0dccb07ac5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubble: {fileID: 0}
+  question: {fileID: 0}
 --- !u!1 &4508807122622253005
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3a21ea5042e543418699617115d325f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d0b6f7c4a786434aa9ca31596cb6dc7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

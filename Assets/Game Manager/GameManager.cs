@@ -25,7 +25,6 @@ namespace Odyssey
 			}
 
 			Instance = this;
-			DontDestroyOnLoad(this);
 		}
 
 		private void Start()
@@ -60,6 +59,11 @@ namespace Odyssey
 			playableDirector.Play();
 			yield return new WaitForSeconds((float) playableDirector.duration);
 			Ask(question);
+		}
+
+		public void End()
+		{
+			
 		}
 
 		#endregion
