@@ -10,8 +10,7 @@ namespace Odyssey
 		// Editor fields
 		[SerializeField] private SpeechBubble speechBubble;
 		[SerializeField] private PlayableDirector playableDirector;
-		[SerializeField] private PlayableAsset playableOption1;
-		[SerializeField] private PlayableAsset playableOption2;
+		[SerializeField] private Animator choiceTree;
 
 		public static GameManager Instance { get; private set; }
 
@@ -43,34 +42,24 @@ namespace Odyssey
 
 		#region GameManager methods
 
-		public void MakeCoice1()
+		public void MakeCoice1() => choiceTree.SetTrigger("Choice1");
+
+		public void MakeCoice2() => choiceTree.SetTrigger("Choice2");
+
+		public void Ask(string question) => speechBubble.Ask(question);
+
+		public void Ask(PlayableAsset playable, string question)
 		{
-			playableDirector.playableAsset = playableOption1;
-			PresentChoiceConsequences();
+			playableDirector.playableAsset = playable;
+			StartCoroutine(PlayPlayableAndAsk(question));
 		}
 
-		public void MakeCoice2()
-		{
-			playableDirector.playableAsset = playableOption2;
-			PresentChoiceConsequences();
-		}
-
-		public void PresentChoice()
-		{
-			SpeechBubble.Instance.Show();
-		}
-
-		public void PresentChoiceConsequences()
-		{
-			StartCoroutine(ShowChoiceConsequences());
-		}
-
-		private IEnumerator ShowChoiceConsequences()
+		private IEnumerator PlayPlayableAndAsk(string question)
 		{
 			SpeechBubble.Instance.Hide();
 			playableDirector.Play();
 			yield return new WaitForSeconds((float) playableDirector.duration);
-			SpeechBubble.Instance.Show();
+			Ask(question);
 		}
 
 		#endregion

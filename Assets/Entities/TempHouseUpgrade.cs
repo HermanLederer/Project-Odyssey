@@ -4,11 +4,10 @@ using UnityEngine;
 
 namespace Odyssey
 {
-	public class House3 : MonoBehaviour
+	public class TempHouseUpgrade : MonoBehaviour
 	{
 		// Editor components
 		[SerializeField] private ParticleSystem upgradeParticles;
-		[SerializeField] private GameObject fence;
 
 		// Private properties
 		private float initialPosition;
@@ -42,7 +41,6 @@ namespace Odyssey
 		{
 			velocity = 3f;
 			upgradeParticles.Play();
-			fence.SetActive(true);
 		}
 	}
 }
