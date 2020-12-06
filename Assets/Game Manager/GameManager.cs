@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 
 namespace Odyssey
@@ -63,7 +64,7 @@ namespace Odyssey
 
 		public void End()
 		{
-			
+			SceneManager.LoadScene("Endscreen");
 		}
 
 		#endregion

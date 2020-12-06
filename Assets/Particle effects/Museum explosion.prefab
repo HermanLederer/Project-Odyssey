@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1922027795667890183}
   - component: {fileID: 1922027795667890180}
   m_Layer: 0
-  m_Name: House explosion
+  m_Name: Museum explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 1
       mode: 0
       spread: 0
       speed:
@@ -975,7 +975,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 16
+        scalar: 32
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1539,7 +1539,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 4
+    tilesX: 8
     tilesY: 4
     animationType: 0
     rowIndex: 0
@@ -4833,7 +4833,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df9d7c683cae4b1429c40ead65a790a8, type: 2}
+  - {fileID: 2100000, guid: b73f539e205b3be43ad9e64e363e1af3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

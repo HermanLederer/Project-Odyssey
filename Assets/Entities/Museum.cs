@@ -2,7 +2,7 @@
 
 namespace Odyssey
 {
-	public class House2 : MonoBehaviour
+	public class Museum : MonoBehaviour
 	{
 		// Editor components
 		[SerializeField] private ParticleSystem explodeParticles;
