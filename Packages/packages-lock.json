@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "com.unity.ide.visualstudio": {
-      "version": "2.0.2",
+      "version": "2.0.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "8.2.0",
+      "version": "8.3.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -17,12 +17,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.universal": {
-      "version": "8.2.0",
+      "version": "8.3.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "8.2.0",
-        "com.unity.shadergraph": "8.2.0"
+        "com.unity.render-pipelines.core": "8.3.1",
+        "com.unity.shadergraph": "8.3.1"
       },
       "url": "https://packages.unity.com"
     },
@@ -34,13 +34,20 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "8.2.0",
+      "version": "8.3.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "8.2.0",
+        "com.unity.render-pipelines.core": "8.3.1",
         "com.unity.searcher": "4.0.9"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.textcore": {
+      "version": "1.0.0-preview.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
@@ -58,6 +65,41 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.ui": {
+      "version": "1.0.0-preview.13",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "nuget.moq": "1.0.0",
+        "nuget.castle-core": "1.0.1",
+        "com.unity.modules.uielementsnative": "1.0.0",
+        "com.unity.textcore": "1.0.0-preview.2"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ui.builder": {
+      "version": "1.0.0-preview.11",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "nuget.castle-core": {
+      "version": "1.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "nuget.moq": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "nuget.castle-core": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
