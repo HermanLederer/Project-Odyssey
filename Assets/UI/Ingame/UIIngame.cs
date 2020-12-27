@@ -3,12 +3,12 @@ using UnityEngine.UIElements;
 
 namespace Odyssey
 {
-	public class SpeechBubble : MonoBehaviour
+	public class UIIngame : MonoBehaviour
 	{
 		VisualElement m_Ingame;
 		Label m_QuestionLabel;
 
-		public static SpeechBubble Instance { get; private set; }
+		public static UIIngame Instance { get; private set; }
 
 		#region MonoBehaviour methods
 

@@ -9,7 +9,7 @@ namespace Odyssey
 	public class GameManager : MonoBehaviour
 	{
 		// Editor fields
-		[SerializeField] private SpeechBubble speechBubble;
+		[SerializeField] private UIIngame speechBubble;
 		[SerializeField] private PlayableDirector playableDirector;
 		[SerializeField] private Animator choiceTree;
 
@@ -56,7 +56,7 @@ namespace Odyssey
 
 		private IEnumerator PlayPlayableAndAsk(string question)
 		{
-			SpeechBubble.Instance.Hide();
+			UIIngame.Instance.Hide();
 			playableDirector.Play();
 			yield return new WaitForSeconds((float) playableDirector.duration);
 			Ask(question);
