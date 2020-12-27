@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="/Assets/UI/style.uss" />
+    <ui:VisualElement name="background">
+        <ui:ScrollView style="align-items: center;">
+            <ui:Label text="Select a level" name="select-level" style="font-size: 48px; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); -unity-text-align: middle-center; height: 100px; color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="level-list" style="max-width: 325px; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Sovereign Nature" name="button-level1" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="level" class="shadow level">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="/Assets/UI/style.uss" />
+    <ui:VisualElement name="background">
+        <ui:VisualElement name="shadow" class="shadow-half" style="padding-top: 0;">
+            <ui:VisualElement name="titlebar" class="titlebar" style="background-color: rgba(1, 188, 212, 255); height: 100px; justify-content: center; border-top-width: 5px; border-bottom-width: 5px; border-top-color: rgba(103, 215, 229, 255); border-bottom-color: rgba(1, 150, 170, 255); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0);">
+                <ui:VisualElement name="logo" style="display: none;" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="button-list" style="align-items: center; padding-top: 50px; padding-bottom: 50px;">
+            <ui:VisualElement name="shadow" class="shadow">
+                <ui:Button text="Play&#10;" name="button-play" class="button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="shadow" class="shadow">
+                <ui:Button text="Visit Momentum&#10;" name="button-momentum" class="button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="shadow" class="shadow">
+                <ui:Button text="Quit&#10;" name="button-quit" class="button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

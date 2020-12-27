@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="level-selector" src="level-selector.uxml" />
+    <ui:Template name="main-menu" src="main-menu.uxml" />
+    <ui:Instance template="main-menu" name="main-menu" style="width: 100%; height: 100%;" />
+    <ui:Instance template="level-selector" name="level-selector" style="width: 100%; height: 100%; display: none;" />
+</ui:UXML>
