@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Odyssey
 {
 	public class SpeechBubble : MonoBehaviour
 	{
-		// Editor fields
-		[SerializeField] private Text question;
+		VisualElement m_Ingame;
+		Label m_QuestionLabel;
 
 		public static SpeechBubble Instance { get; private set; }
 
@@ -23,22 +21,41 @@ namespace Odyssey
 			}
 
 			Instance = this;
-			DontDestroyOnLoad(this);
+		}
+
+		private void OnEnable()
+		{
+			m_Ingame = GetComponent<UIDocument>().rootVisualElement;
+			m_QuestionLabel = m_Ingame.Q<Label>("label-question");
+
+			// Main menu
+			m_Ingame.Q("yes").RegisterCallback<ClickEvent>(ev => ChoseYes());
+			m_Ingame.Q("no").RegisterCallback<ClickEvent>(ev => ChoseNo());
 		}
 
 		#endregion
 
 		#region SpeechBubble methods
 
+		private void ChoseYes()
+		{
+			GameManager.Instance.MakeCoice1();
+		}
+
+		private void ChoseNo()
+		{
+			GameManager.Instance.MakeCoice2();
+		}
+
 		public void Ask(string question)
 		{
-			this.question.text = question;
-			gameObject.SetActive(true);
+			m_QuestionLabel.text = question;
+			m_Ingame.style.display = DisplayStyle.Flex;
 		}
 
 		public void Hide()
 		{
-			gameObject.SetActive(false);
+			m_Ingame.style.display = DisplayStyle.None;
 		}
 
 		#endregion

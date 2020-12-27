@@ -70,6 +70,7 @@ Button.button {
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    color: rgba(24, 24, 40, 255);
 }
 
 Button.button:hover {
