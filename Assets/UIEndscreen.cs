@@ -7,28 +7,60 @@ namespace Odyssey
 	public class UIEndscreen : MonoBehaviour
 	{
 		VisualElement m_Endscreen;
-		Label m_TitleLabel;
-		Label m_DescriptionLabel;
-		Label m_ContinueButton;
+		VisualElement m_EndingPanel;
+		VisualElement m_RealEndingPanel;
+		VisualElement m_FalseEndingPanel;
+		VisualElement m_MomentumPanel;
 
 		#region MonoBehaviour methods
 
 		private void OnEnable()
 		{
 			m_Endscreen = GetComponent<UIDocument>().rootVisualElement;
-			m_TitleLabel = m_Endscreen.Q<Label>("label-question");
 
-			// Main menu
-			//m_Endscreen.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
-			m_Endscreen.Q("button-continue").RegisterCallback<ClickEvent>(ev => Continue());
-			m_Endscreen.Q("button-again").RegisterCallback<ClickEvent>(ev => PlayAgain());
+			m_EndingPanel = m_Endscreen.Q("ending-panel");
+			m_RealEndingPanel = m_EndingPanel.Q("real-ending");
+			m_FalseEndingPanel = m_EndingPanel.Q("false-ending");
+			m_MomentumPanel = m_Endscreen.Q("visit-momentum");
+
+			// False ending
+			m_FalseEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
+			m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => Continue());
+			m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => PlayAgain());
+
+			// Real ending
+			m_RealEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
+			m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => Continue());
+
+			m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => Learn());
+			m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => MainMenu());
+
+			//
+			//m_RealEndingPanel.style.display = DisplayStyle.Flex;
+			m_FalseEndingPanel.style.display = DisplayStyle.Flex;
 		}
 
 		#endregion
 
-		#region SpeechBubble methods
+		#region UIEndscreen methods
+
+		private void Share()
+		{
+			Application.OpenURL("https://twitter.com/");
+		}
 
 		private void Continue()
+		{
+			m_EndingPanel.style.display = DisplayStyle.None;
+			m_MomentumPanel.style.display = DisplayStyle.Flex;
+		}
+
+		private void Learn()
+		{
+			Application.OpenURL("https://prod-v3.odyssey.ninja/");
+		}
+
+		private void MainMenu()
 		{
 			SceneManager.LoadScene("Titlescreen");
 		}
@@ -38,16 +70,6 @@ namespace Odyssey
 			SceneManager.LoadScene("Game");
 		}
 
-		public void Ask(string question)
-		{
-			m_TitleLabel.text = question;
-			m_Endscreen.style.display = DisplayStyle.Flex;
-		}
-
-		public void Hide()
-		{
-			m_Endscreen.style.display = DisplayStyle.None;
-		}
 
 		#endregion
 	}

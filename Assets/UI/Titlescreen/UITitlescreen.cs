@@ -19,7 +19,7 @@ public class UITitlescreen : MonoBehaviour
 
 		// Main menu
 		m_Titlescreen.Q<Button>("button-play").RegisterCallback<ClickEvent>(ev => TitlescreenLevelSelector());
-		//titlescreen.Q<Button>("button-momentum").RegisterCallback<ClickEvent>(ev => TitlescreenLevelSelector());
+		m_Titlescreen.Q<Button>("button-momentum").RegisterCallback<ClickEvent>(ev => Learn());
 		m_Titlescreen.Q<Button>("button-quit").RegisterCallback<ClickEvent>(ev => ExitGame());
 
 		// Level selector
@@ -36,6 +36,11 @@ public class UITitlescreen : MonoBehaviour
 	{
 		m_LevelSelector.style.display = DisplayStyle.None;
 		m_MainMenu.style.display = DisplayStyle.Flex;
+	}
+
+	private void Learn()
+	{
+		Application.OpenURL("https://prod-v3.odyssey.ninja/");
 	}
 
 	public void GotoLevel1()

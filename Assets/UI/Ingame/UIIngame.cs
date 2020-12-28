@@ -35,7 +35,7 @@ namespace Odyssey
 
 		#endregion
 
-		#region SpeechBubble methods
+		#region UIIngame methods
 
 		private void ChoseYes()
 		{

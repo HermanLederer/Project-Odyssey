@@ -65,6 +65,7 @@ namespace Odyssey
 		public void End()
 		{
 			SceneManager.LoadScene("Endscreen");
+			Instance = null;
 		}
 
 		#endregion
