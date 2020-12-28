@@ -5,7 +5,7 @@
 }
 
 #name {
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     font-size: 48px;
     -unity-font: resource('Fonts/Pic0 1.110');
     -unity-text-align: upper-center;
@@ -17,7 +17,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: rgba(24, 24, 40, 255);
+    background-color: rgb(24, 24, 40);
 }
 
 #button-list > .shadow {
@@ -70,7 +70,7 @@ Button.button {
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    color: rgba(24, 24, 40, 255);
+    color: rgb(24, 24, 40);
 }
 
 Button.button:hover {
