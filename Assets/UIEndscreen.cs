@@ -25,15 +25,15 @@ namespace Odyssey
 
 			// False ending
 			m_FalseEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
-			m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => Continue());
-			m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => PlayAgain());
+			m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
+			m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => InviteToMomentum());
 
 			// Real ending
 			m_RealEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
-			m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => Continue());
+			m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
 
-			m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => Learn());
-			m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => MainMenu());
+			m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
+			m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
 
 			//
 			//m_RealEndingPanel.style.display = DisplayStyle.Flex;
@@ -49,25 +49,25 @@ namespace Odyssey
 			Application.OpenURL("https://twitter.com/");
 		}
 
-		private void Continue()
-		{
-			m_EndingPanel.style.display = DisplayStyle.None;
-			m_MomentumPanel.style.display = DisplayStyle.Flex;
-		}
-
-		private void Learn()
+		private void OpenMomentum()
 		{
 			Application.OpenURL("https://prod-v3.odyssey.ninja/");
 		}
 
-		private void MainMenu()
+		private void OpenMainMenu()
 		{
 			SceneManager.LoadScene("Titlescreen");
 		}
 
-		private void PlayAgain()
+		private void Restart()
 		{
 			SceneManager.LoadScene("Game");
+		}
+
+		private void InviteToMomentum()
+		{
+			m_EndingPanel.style.display = DisplayStyle.None;
+			m_MomentumPanel.style.display = DisplayStyle.Flex;
 		}
 
 
