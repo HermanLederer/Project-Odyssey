@@ -3,7 +3,7 @@
     <ui:VisualElement name="background" style="flex-direction: column-reverse; align-items: center;">
         <ui:VisualElement class="shadow" style="position: absolute; margin-bottom: 100px;">
             <ui:VisualElement style="background-color: rgb(212, 214, 222); border-top-color: rgb(255, 255, 255); border-top-width: 5px;">
-                <ui:Label text="You reached the end!" display-tooltip-when-elided="true" name="label-title" style="-unity-text-align: upper-center; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); font-size: 48px; margin-top: 50px; margin-bottom: 10px; padding-left: 50px; padding-right: 25px; color: rgba(24, 24, 40, 255);" />
+                <ui:Label text="You reached the end!" display-tooltip-when-elided="true" name="label-title" style="-unity-text-align: upper-center; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); font-size: 48px; margin-top: 50px; margin-bottom: 10px; padding-left: 50px; padding-right: 50px; color: rgba(24, 24, 40, 255);" />
                 <ui:Label text="But you didn&apos;t find the real ending..." display-tooltip-when-elided="true" name="label-description" style="-unity-text-align: upper-center; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); font-size: 18px; padding-left: 50px; padding-right: 50px; margin-bottom: 50px; color: rgba(24, 24, 40, 255);" />
                 <ui:Button text="Share this ending" display-tooltip-when-elided="true" name="button-share" class="button" style="height: 75px; color: rgb(255, 255, 255); border-top-color: rgb(170, 154, 176); background-color: rgb(113, 87, 124);" />
                 <ui:VisualElement style="flex-direction: row;">

@@ -6,7 +6,7 @@
 
 #name {
     color: rgb(255, 255, 255);
-    font-size: 48px;
+    font-size: 75px;
     -unity-font: resource('Fonts/Pic0 1.110');
     -unity-text-align: upper-center;
 }
@@ -23,7 +23,8 @@
 #button-list > .shadow {
     margin-bottom: 25px;
     background-color: rgba(0, 0, 0, 0.4);
-    width: 50%;
+    max-width: 500px;
+    width: 100%;
 }
 
 #button-list > .shadow > Button {
