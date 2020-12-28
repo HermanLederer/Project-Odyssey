@@ -2,8 +2,8 @@
     <Style src="/Assets/UI/style.uss" />
     <ui:VisualElement name="background">
         <ui:ScrollView style="align-items: center;">
-            <ui:Label text="Select a level" name="select-level" style="font-size: 48px; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); -unity-text-align: middle-center; height: 100px; color: rgb(255, 255, 255);" />
-            <ui:VisualElement name="level-list" style="max-width: 325px; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
+            <ui:Label text="Select a level" name="select-level" style="font-size: 50px; -unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); -unity-text-align: middle-center; height: 200px; color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="level-list" style="max-width: 500px; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
                 <ui:VisualElement name="level" class="shadow level">
                     <ui:Button text="Sovereign Nature" name="button-level1" class="button" />
                 </ui:VisualElement>
