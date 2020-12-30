@@ -14,8 +14,8 @@ namespace Odyssey
 
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
-			if (cutscene) GameManager.Instance.Ask(cutscene, nextQuestion);
-			else GameManager.Instance.Ask(nextQuestion);
+			if (cutscene) GameManager.Instance.Ask(cutscene, nextQuestion.Replace("\n", "").Replace("\r", ""));
+			else GameManager.Instance.Ask(nextQuestion.Replace("\n", "").Replace("\r", ""));
 		}
 	}
 }
