@@ -4,57 +4,60 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-[RequireComponent(typeof(UIDocument))]
-public class UITitlescreen : MonoBehaviour
+namespace Odyssey
 {
-	VisualElement m_Titlescreen;
-	VisualElement m_MainMenu;
-	VisualElement m_LevelSelector;
-
-	private void OnEnable()
+	[RequireComponent(typeof(UIDocument))]
+	public class UITitlescreen : MonoBehaviour
 	{
-		m_Titlescreen = GetComponent<UIDocument>().rootVisualElement;
-		m_MainMenu = m_Titlescreen.Q("main-menu");
-		m_LevelSelector = m_Titlescreen.Q("level-selector");
+		VisualElement m_Titlescreen;
+		VisualElement m_MainMenu;
+		VisualElement m_LevelSelector;
 
-		// Main menu
-		m_Titlescreen.Q<Button>("button-play").RegisterCallback<ClickEvent>(ev => TitlescreenLevelSelector());
-		m_Titlescreen.Q<Button>("button-momentum").RegisterCallback<ClickEvent>(ev => Learn());
-		m_Titlescreen.Q<Button>("button-quit").RegisterCallback<ClickEvent>(ev => ExitGame());
+		private void OnEnable()
+		{
+			m_Titlescreen = GetComponent<UIDocument>().rootVisualElement;
+			m_MainMenu = m_Titlescreen.Q("main-menu");
+			m_LevelSelector = m_Titlescreen.Q("level-selector");
 
-		// Level selector
-		m_Titlescreen.Q<Button>("button-level1").RegisterCallback<ClickEvent>(ev => GotoLevel1());
-	}
+			// Main menu
+			m_Titlescreen.Q<Button>("button-play").RegisterCallback<ClickEvent>(ev => TitlescreenLevelSelector());
+			m_Titlescreen.Q<Button>("button-momentum").RegisterCallback<ClickEvent>(ev => Learn());
+			m_Titlescreen.Q<Button>("button-quit").RegisterCallback<ClickEvent>(ev => ExitGame());
 
-	public void TitlescreenLevelSelector()
-	{
-		m_MainMenu.style.display = DisplayStyle.None;
-		m_LevelSelector.style.display = DisplayStyle.Flex;
-	}
+			// Level selector
+			m_Titlescreen.Q<Button>("button-level1").RegisterCallback<ClickEvent>(ev => GotoLevel1());
+		}
 
-	public void TitlescreenMainMenu()
-	{
-		m_LevelSelector.style.display = DisplayStyle.None;
-		m_MainMenu.style.display = DisplayStyle.Flex;
-	}
+		public void TitlescreenLevelSelector()
+		{
+			m_MainMenu.style.display = DisplayStyle.None;
+			m_LevelSelector.style.display = DisplayStyle.Flex;
+		}
 
-	private void Learn()
-	{
-		Application.OpenURL("https://prod-v3.odyssey.ninja/");
-	}
+		public void TitlescreenMainMenu()
+		{
+			m_LevelSelector.style.display = DisplayStyle.None;
+			m_MainMenu.style.display = DisplayStyle.Flex;
+		}
 
-	public void GotoLevel1()
-	{
-		SceneManager.LoadScene("Game");
-	}
+		private void Learn()
+		{
+			Application.OpenURL("https://prod-v3.odyssey.ninja/");
+		}
 
-	public void GoToEndscreen()
-	{
-		SceneManager.LoadScene("Endscreen");
-	}
+		public void GotoLevel1()
+		{
+			SceneManager.LoadScene("Game");
+		}
 
-	public void ExitGame()
-	{
-		Application.Quit();
+		public void GoToEndscreen()
+		{
+			SceneManager.LoadScene("Endscreen");
+		}
+
+		public void ExitGame()
+		{
+			Application.Quit();
+		}
 	}
 }

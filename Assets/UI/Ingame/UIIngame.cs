@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 namespace Odyssey
 {
+	[RequireComponent(typeof(UIDocument))]
 	public class UIIngame : MonoBehaviour
 	{
 		VisualElement m_Ingame;
