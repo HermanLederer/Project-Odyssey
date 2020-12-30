@@ -413,7 +413,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: State machine
+  m_Name: 2020-1-SN State machine
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Choice1

@@ -6,12 +6,17 @@ using UnityEngine.Playables;
 
 namespace Odyssey
 {
+	[RequireComponent(typeof(PlayableDirector))]
+	[RequireComponent(typeof(Animator))]
 	public class GameManager : MonoBehaviour
 	{
 		// Editor fields
-		[SerializeField] private UIIngame speechBubble;
-		[SerializeField] private PlayableDirector playableDirector;
-		[SerializeField] private Animator choiceTree;
+		[Header("Set this per level")]
+		[SerializeField] private UIIngame ui;
+
+		// Other components
+		private PlayableDirector playableDirector;
+		private Animator choiceTree;
 
 		public static GameManager Instance { get; private set; }
 
@@ -26,6 +31,9 @@ namespace Odyssey
 			}
 
 			Instance = this;
+
+			playableDirector = GetComponent<PlayableDirector>();
+			choiceTree = GetComponent<Animator>();
 		}
 
 		private void Start()
@@ -46,7 +54,7 @@ namespace Odyssey
 
 		public void MakeCoice2() => choiceTree.SetTrigger("Choice2");
 
-		public void Ask(string question) => speechBubble.Ask(question);
+		public void Ask(string question) => ui.Ask(question);
 
 		public void Ask(PlayableAsset playable, string question)
 		{

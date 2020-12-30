@@ -9,6 +9,9 @@ namespace Odyssey
 	[RequireComponent(typeof(UIDocument))]
 	public class UITitlescreen : MonoBehaviour
 	{
+		// TODO: Get rid of this
+		[SerializeField] Demo.GameSceneNameContainer demoSceneNameContainer;
+
 		VisualElement m_Titlescreen;
 		VisualElement m_MainMenu;
 		VisualElement m_LevelSelector;
@@ -47,7 +50,7 @@ namespace Odyssey
 
 		public void GotoLevel1()
 		{
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene(demoSceneNameContainer.gameSceneName);
 		}
 
 		public void GoToEndscreen()

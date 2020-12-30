@@ -6,6 +6,9 @@ namespace Odyssey
 {
 	public class UIEndscreen : MonoBehaviour
 	{
+		// TODO: Get rid of this
+		[SerializeField] Demo.GameSceneNameContainer demoSceneNameContainer;
+		
 		VisualElement m_Endscreen;
 		VisualElement m_EndingPanel;
 		VisualElement m_RealEndingPanel;
@@ -61,7 +64,7 @@ namespace Odyssey
 
 		private void Restart()
 		{
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene(demoSceneNameContainer.gameSceneName);
 		}
 
 		private void InviteToMomentum()
