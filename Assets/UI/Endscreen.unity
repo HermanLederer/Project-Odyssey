@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   demoSceneNameContainer: {fileID: 11400000, guid: 3191099d84dc60a42a1a637205154595, type: 2}
+  gameData: {fileID: 11400000, guid: 2e46d84cae07add4fab233bdf575c60b, type: 2}
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,8 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
-  playableDirector: {fileID: 0}
-  choiceTree: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 2e46d84cae07add4fab233bdf575c60b, type: 2}
 --- !u!95 &8394169211512245174
 Animator:
   serializedVersion: 3

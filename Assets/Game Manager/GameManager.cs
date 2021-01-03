@@ -14,6 +14,9 @@ namespace Odyssey
 		[Header("Set this per level")]
 		[SerializeField] private UIIngame ui;
 
+		[Header("Set this per project")]
+		[SerializeField] private GameData gameData;
+
 		// Other components
 		private PlayableDirector playableDirector;
 		private Animator choiceTree;
@@ -70,10 +73,14 @@ namespace Odyssey
 			Ask(question);
 		}
 
-		public void End()
+		public void End(string finalMessage, bool isRealEnding)
 		{
-			SceneManager.LoadScene("Endscreen");
+			gameData.finalMessage = finalMessage;
+			gameData.isRealEndingFound = isRealEnding;
+
 			Instance = null;
+
+			SceneManager.LoadScene("Endscreen");
 		}
 
 		#endregion

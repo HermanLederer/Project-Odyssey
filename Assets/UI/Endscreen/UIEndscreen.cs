@@ -6,8 +6,9 @@ namespace Odyssey
 {
 	public class UIEndscreen : MonoBehaviour
 	{
-		// TODO: Get rid of this
+		// TODO: Get rid of demoSceneNameContainer
 		[SerializeField] Demo.GameSceneNameContainer demoSceneNameContainer;
+		[SerializeField] GameData gameData;
 		
 		VisualElement m_Endscreen;
 		VisualElement m_EndingPanel;
@@ -38,9 +39,14 @@ namespace Odyssey
 			m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
 			m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
 
-			//
-			//m_RealEndingPanel.style.display = DisplayStyle.Flex;
-			m_FalseEndingPanel.style.display = DisplayStyle.Flex;
+			if (gameData.isRealEndingFound)
+			{
+				m_RealEndingPanel.style.display = DisplayStyle.Flex;
+			}
+			else // false ending
+			{
+				m_FalseEndingPanel.style.display = DisplayStyle.Flex;
+			}
 		}
 
 		#endregion
