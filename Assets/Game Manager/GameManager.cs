@@ -69,7 +69,9 @@ namespace Odyssey
 		{
 			UIIngame.Instance.Hide();
 			playableDirector.Play();
+
 			yield return new WaitForSeconds((float) playableDirector.duration);
+
 			Ask(question);
 		}
 
@@ -81,6 +83,22 @@ namespace Odyssey
 			Instance = null;
 
 			SceneManager.LoadScene("Endscreen");
+		}
+
+		public void End(PlayableAsset playable, string finalMessage, bool isRealEnding)
+		{
+			playableDirector.playableAsset = playable;
+			StartCoroutine(PlayPlayableAndEnd(finalMessage, isRealEnding));
+		}
+
+		private IEnumerator PlayPlayableAndEnd(string finalMessage, bool isRealEnding)
+		{
+			UIIngame.Instance.Hide();
+			playableDirector.Play();
+
+			yield return new WaitForSeconds((float)playableDirector.duration);
+
+			End(finalMessage, isRealEnding);
 		}
 
 		#endregion

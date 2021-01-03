@@ -16,7 +16,8 @@ namespace Odyssey
 
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 		{
-			GameManager.Instance.End(finalMessage.Replace("\n", "").Replace("\r", ""), isRealEnding);
+			if (cutscene) GameManager.Instance.End(cutscene, finalMessage.Replace("\n", "").Replace("\r", ""), isRealEnding);
+			else GameManager.Instance.End(finalMessage.Replace("\n", "").Replace("\r", ""), isRealEnding);
 		}
 	}
 }

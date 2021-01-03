@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c83c03bed274b43a90460cda85fad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
+  cutscene: {fileID: 11400000, guid: 47de851bdf833374c8e69c9438f0cd8b, type: 2}
   finalMessage: "The river and the ocean turn green, fi\x1Flled with plastic. The
     factory\r increases productivity, so the workers earn more. The wealth of the\r\ncity
     attracts more people and the city grows. The city is sued by\r eco-friendly organisation
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88adb9d6ffcb694189d1f23b72645ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
+  cutscene: {fileID: 11400000, guid: 4448349bc7f192d4687f82634252b680, type: 2}
   nextQuestion: "With the water now clean, the \x1Ffishing business is thriving.
     The economy is blooming and more \x1Ffishing jobs are available. This increased
     demand for\r fi\x1Fsh has led to overfi\x1Fshing, which means that the ocean
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88adb9d6ffcb694189d1f23b72645ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
+  cutscene: {fileID: 11400000, guid: a0764e2a5ef498b49a89bbd7297943cb, type: 2}
   nextQuestion: "Now that the fi\x1Fsh are back, only the local fi\x1Fshermen are
     allowed\r to \x1Ffish. This leaves many of the employees of big \x1Ffishing companies
     without a job. Some of the \x1Ffishermen suggest investing in\r the diving business,
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c83c03bed274b43a90460cda85fad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
+  cutscene: {fileID: 11400000, guid: f70b87178e637e646945e77404569f2a, type: 2}
   finalMessage: "The infl\x1Dux of tourism increases the\r money \x1Dflow in your
     city, making up\r for the \x1Ffishing business. Tourism\r paves the way for other
     sources of\r revenue to thrive as well, such as\r hotels and restaurants."
