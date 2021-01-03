@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88adb9d6ffcb694189d1f23b72645ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
+  cutscene: {fileID: 11400000, guid: b9451e0d339c9494594aad2501ed3ebe, type: 2}
   nextQuestion: "The workers are protesting because factory work has\r been stopped.
     They demand money to pay their bills and\r want raised pay once the factory is
     running again.\r Will you give in to their demands?"
