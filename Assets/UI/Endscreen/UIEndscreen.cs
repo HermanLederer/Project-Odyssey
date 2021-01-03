@@ -27,24 +27,27 @@ namespace Odyssey
 			m_FalseEndingPanel = m_EndingPanel.Q("false-ending");
 			m_MomentumPanel = m_Endscreen.Q("visit-momentum");
 
-			// False ending
-			m_FalseEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
-			m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
-			m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => InviteToMomentum());
-
-			// Real ending
-			m_RealEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
-			m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
-
-			m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
-			m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
-
+			// Ending panel
 			if (gameData.isRealEndingFound)
 			{
+				m_RealEndingPanel.Q<Label>("label-final-message").text = gameData.finalMessage;
+
+				m_RealEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
+				m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
+
+				m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
+				m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
+
 				m_RealEndingPanel.style.display = DisplayStyle.Flex;
 			}
 			else // false ending
 			{
+				m_FalseEndingPanel.Q<Label>("label-final-message").text = gameData.finalMessage;
+
+				m_FalseEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
+				m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
+				m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => InviteToMomentum());
+
 				m_FalseEndingPanel.style.display = DisplayStyle.Flex;
 			}
 		}
