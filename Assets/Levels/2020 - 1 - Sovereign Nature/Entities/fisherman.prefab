@@ -116,8 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 0ffd7c1fa7fef5345a3c7eeaee1f8e30, type: 2}
-    - {fileID: 11400000, guid: 7316df96bc09a6c4cab419c16a8b2b55, type: 2}
+    - {fileID: 11400000, guid: e5da696302d789c4e90417b72b16ef00, type: 2}
+    - {fileID: 11400000, guid: 95b921d45c4a8af43a9738c01325d5e6, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:

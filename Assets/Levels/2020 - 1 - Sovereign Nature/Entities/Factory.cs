@@ -9,6 +9,7 @@ public class Factory : MonoBehaviour
 	[SerializeField] private Sprite spriteShutDown;
 	[SerializeField] private Sprite spriteAbandoned;
 	[SerializeField] private ParticleSystem smokeParticles;
+	[SerializeField] private ParticleSystem smokeParticles2;
 
 	public void Start()
 	{
@@ -31,5 +32,11 @@ public class Factory : MonoBehaviour
 	{
 		GetComponent<SpriteRenderer>().sprite = spriteAbandoned;
 		smokeParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+	}
+
+	public void IncreaseProduction()
+	{
+		smokeParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+		smokeParticles2.Play(true);
 	}
 }

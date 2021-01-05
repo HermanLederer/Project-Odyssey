@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c83c03bed274b43a90460cda85fad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 0}
-  finalMessage: "The protest spins out of control and there\r are wounded on both
-    sides. Workers refuse\r to go back to work once the factory is up\r and running
-    and leave the city. The factory\r becomes rusty because it is not being used.\r
-    The city economically deteriorates."
+  cutscene: {fileID: 11400000, guid: 7b4fefd2b98a5c8428c0dc079f7ecc66, type: 2}
+  finalMessage: "The protest spins out of control. The factory\r becomes rusty because
+    it is not being used.\r The city economically deteriorates and everyone leaves."
   isRealEnding: 0
 --- !u!1101 &-8958338030914574587
 AnimatorStateTransition:
