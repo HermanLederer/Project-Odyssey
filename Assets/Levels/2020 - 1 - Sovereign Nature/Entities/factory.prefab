@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1843359735
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e95fb71cc9eebf4691fdb26cdc61c34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f94f86f41b3eff64dbee99757ef3f217, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d8397f214017643bfb07df0d3071cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteOpen: {fileID: 21300000, guid: 4e95fb71cc9eebf4691fdb26cdc61c34, type: 3}
-  spriteShutDown: {fileID: 21300000, guid: b0abe1574fc5d7541ad64b58958ea590, type: 3}
+  spriteOpen: {fileID: 21300000, guid: f94f86f41b3eff64dbee99757ef3f217, type: 3}
+  spriteShutDown: {fileID: 21300000, guid: b0bedd5f5c231f344a1915b8d109f571, type: 3}
+  spriteAbandoned: {fileID: 21300000, guid: 85e3c4c139520724fa9847b33b28033f, type: 3}
   smokeParticles: {fileID: 5179557855534821965}
 --- !u!114 &6291676731817911951
 MonoBehaviour:
@@ -143,15 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615368642112165545, guid: 3cdff4f79f223ee43a354d41209f2cbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.32
+      value: -1.18
       objectReference: {fileID: 0}
     - target: {fileID: 1615368642112165545, guid: 3cdff4f79f223ee43a354d41209f2cbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.87
+      value: 2.31
       objectReference: {fileID: 0}
     - target: {fileID: 1615368642112165545, guid: 3cdff4f79f223ee43a354d41209f2cbd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615368642112165545, guid: 3cdff4f79f223ee43a354d41209f2cbd, type: 3}
       propertyPath: m_LocalRotation.w

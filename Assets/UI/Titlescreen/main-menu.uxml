@@ -3,7 +3,7 @@
     <ui:VisualElement name="background">
         <ui:VisualElement name="shadow" class="shadow-half" style="padding-top: 0;">
             <ui:VisualElement name="titlebar" class="titlebar" style="background-color: rgb(1, 188, 212); height: 200px; justify-content: center; border-top-width: 5px; border-bottom-width: 5px; border-top-color: rgb(103, 215, 229); border-bottom-color: rgb(1, 150, 170); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0);">
-                <ui:VisualElement name="logo" style="display: none;" />
+                <ui:VisualElement name="logo" style="display: none; background-image: url(&apos;/Assets/UI/Sprites/game-icon.png&apos;);" />
                 <ui:Label text="ODYSSEY.IO" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
         </ui:VisualElement>

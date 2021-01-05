@@ -35,9 +35,6 @@ namespace Odyssey
 				m_RealEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
 				m_RealEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
 
-				m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
-				m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
-
 				m_RealEndingPanel.style.display = DisplayStyle.Flex;
 			}
 			else // false ending
@@ -47,6 +44,9 @@ namespace Odyssey
 				m_FalseEndingPanel.Q("button-share").RegisterCallback<ClickEvent>(ev => Share());
 				m_FalseEndingPanel.Q("button-continue").RegisterCallback<ClickEvent>(ev => OpenMainMenu());
 				m_FalseEndingPanel.Q("button-again").RegisterCallback<ClickEvent>(ev => InviteToMomentum());
+
+				m_MomentumPanel.Q("yes").RegisterCallback<ClickEvent>(ev => { OpenMomentum(); Restart(); });
+				m_MomentumPanel.Q("no").RegisterCallback<ClickEvent>(ev => Restart());
 
 				m_FalseEndingPanel.style.display = DisplayStyle.Flex;
 			}
