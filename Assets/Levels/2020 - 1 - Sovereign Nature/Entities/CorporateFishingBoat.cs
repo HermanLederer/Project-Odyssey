@@ -25,7 +25,7 @@ public class CorporateFishingBoat : MonoBehaviour
 	{
 		sinValue += sinSpeed * Time.deltaTime;
 		spriteTransform.localPosition = Vector3.up * Mathf.Sin(sinValue) * flaotAmopunt;
-		spriteTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Sin(sinValue - Mathf.PI / 2) * tiltAmopunt);
+		spriteTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Sin(sinValue + Mathf.PI / 2) * tiltAmopunt);
 	}
 
 	public void SailIn()
