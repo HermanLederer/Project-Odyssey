@@ -99,3 +99,9 @@ Button.button:hover {
     width: 140px;
     height: 140px;
 }
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

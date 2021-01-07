@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="/Assets/UI/style.uss" />
+    <ui:VisualElement style="justify-content: flex-end; height: 100%; align-items: center; background-color: rgba(0, 0, 0, 0.25);">
+        <ui:VisualElement class="shadow" style="max-width: 500px; margin-bottom: 200px;">
+            <ui:VisualElement style="background-color: rgb(1, 188, 212); margin-top: 0; margin-bottom: 0; justify-content: center; align-items: center; min-height: 500px;">
+                <ui:Label text="Before you continue" display-tooltip-when-elided="true" style="-unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); font-size: 48px; color: rgb(255, 255, 255); -unity-text-align: upper-center; padding-right: 50px; padding-left: 50px; padding-top: 0;" />
+                <ui:Label text="Would you like to learn about Sovereign Nature on Odyssey Momentum? That can help you find the real ending." style="-unity-font: resource(&apos;Fonts/Pic0 1.110&apos;); font-size: 24px; color: rgb(255, 255, 255); -unity-text-align: upper-center; padding-right: 50px; padding-left: 50px; white-space: normal; padding-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

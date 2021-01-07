@@ -67,7 +67,7 @@ namespace Odyssey
 
 		private IEnumerator PlayPlayableAndAsk(string question)
 		{
-			UIIngame.Instance.Hide();
+			ui.HideQuestion();
 			playableDirector.Play();
 
 			yield return new WaitForSeconds((float) playableDirector.duration);
@@ -82,7 +82,8 @@ namespace Odyssey
 
 			Instance = null;
 
-			SceneManager.LoadScene("Endscreen");
+			ui.End(finalMessage, isRealEnding);
+			//SceneManager.LoadScene("Endscreen");
 		}
 
 		public void End(PlayableAsset playable, string finalMessage, bool isRealEnding)
@@ -93,7 +94,7 @@ namespace Odyssey
 
 		private IEnumerator PlayPlayableAndEnd(string finalMessage, bool isRealEnding)
 		{
-			UIIngame.Instance.Hide();
+			ui.HideQuestion();
 			playableDirector.Play();
 
 			yield return new WaitForSeconds((float)playableDirector.duration);

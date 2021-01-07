@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a767b2f618d54a43a1c0dccb07ac5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  demoSceneNameContainer: {fileID: 11400000, guid: 3191099d84dc60a42a1a637205154595, type: 2}
 --- !u!1001 &292773897
 PrefabInstance:
   m_ObjectHideFlags: 0
