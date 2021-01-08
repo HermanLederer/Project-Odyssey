@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 namespace Odyssey
 {
 	[RequireComponent(typeof(UIDocument))]
+	[RequireComponent(typeof(AudioSource))]
 	public class UITitlescreen : MonoBehaviour
 	{
 		// TODO: Get rid of this
@@ -15,6 +16,16 @@ namespace Odyssey
 		VisualElement m_Titlescreen;
 		VisualElement m_MainMenu;
 		VisualElement m_LevelSelector;
+
+		// UI Audio
+		AudioSource audioSource;
+		[Header("Audio clips")]
+		[SerializeField] AudioClip click;
+
+		private void Awake()
+		{
+			audioSource = GetComponent<AudioSource>();
+		}
 
 		private void OnEnable()
 		{
@@ -33,33 +44,39 @@ namespace Odyssey
 
 		public void TitlescreenLevelSelector()
 		{
+			audioSource.PlayOneShot(click);
 			m_MainMenu.style.display = DisplayStyle.None;
 			m_LevelSelector.style.display = DisplayStyle.Flex;
 		}
 
 		public void TitlescreenMainMenu()
 		{
+			audioSource.PlayOneShot(click);
 			m_LevelSelector.style.display = DisplayStyle.None;
 			m_MainMenu.style.display = DisplayStyle.Flex;
 		}
 
 		private void Learn()
 		{
+			audioSource.PlayOneShot(click);
 			Application.OpenURL("https://prod-v3.odyssey.ninja/");
 		}
 
-		public void GotoLevel1()
+		public void GotoLevel1() => StartCoroutine(PlayClickAndGotoLevel1());
+
+		IEnumerator PlayClickAndGotoLevel1()
 		{
+			audioSource.PlayOneShot(click);
+			yield return new WaitForSeconds(click.length);
 			SceneManager.LoadScene(demoSceneNameContainer.gameSceneName);
 		}
 
-		public void GoToEndscreen()
-		{
-			SceneManager.LoadScene("Endscreen");
-		}
+		public void ExitGame() => StartCoroutine(PlayClickAndQuit());
 
-		public void ExitGame()
+		IEnumerator PlayClickAndQuit()
 		{
+			audioSource.PlayOneShot(click);
+			yield return new WaitForSeconds(click.length);
 			Application.Quit();
 		}
 	}

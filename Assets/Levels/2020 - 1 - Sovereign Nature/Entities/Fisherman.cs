@@ -2,33 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fisherman : MonoBehaviour
+public class Fisherman : Poppable
 {
 	public float mass = 2f;
 	public float jumpVelocity = 2f;
 
 	private float velocity = 0f;
 	private float timeTillJump = 0f;
-	private bool isFishing = false;
-	private bool isVisible = false;
 
-	private float groundPosY;
+	private bool isVisible;
 
-	new private SpriteRenderer renderer;
-
-	public ParticleSystem appearParticles;
 	public ParticleSystem incomeParticles;
-
-	private void Awake()
-	{
-		renderer = GetComponent<SpriteRenderer>();
-
-		renderer.enabled = false;
-	}
 
 	private void Start()
 	{
-		groundPosY = transform.position.y;
+		spriteTransform.gameObject.SetActive(false);
+		isVisible = false;
 	}
 
 	private void Update()
@@ -37,15 +26,15 @@ public class Fisherman : MonoBehaviour
 		velocity += Physics2D.gravity.y * mass * Time.deltaTime;
 
 		// Movement
-		transform.position += Vector3.up * velocity * Time.deltaTime;
+		spriteTransform.localPosition += Vector3.up * velocity * Time.deltaTime;
 
-		if (transform.position.y <= groundPosY)
+		if (spriteTransform.localPosition.y <= 0f)
 		{
-			transform.position = new Vector3(transform.position.x, groundPosY, transform.position.z);
+			spriteTransform.localPosition = new Vector3(spriteTransform.localPosition.x, 0f, spriteTransform.localPosition.z);
 			velocity = 0f;
 		}
 
-		if (isFishing && timeTillJump <= Time.time)
+		if (isVisible && timeTillJump <= Time.time)
 		{
 			Jump();
 			timeTillJump = Time.time + Random.Range(3f, 7f);
@@ -54,39 +43,21 @@ public class Fisherman : MonoBehaviour
 
 	public void Jump()
 	{
-		if (velocity <= 0) groundPosY = transform.position.y;
 		velocity = jumpVelocity;
 	}
 
-	public void Appear()
+	public override void PopIn()
 	{
+		base.PopIn();
+		timeTillJump = Time.time + Random.Range(2f, 4f);
 		isVisible = true;
-		renderer.enabled = true;
-		appearParticles.Play();
-		Jump();
-	}
-
-	public void Disappear()
-	{
-		StopFishing();
-		isVisible = false;
-		renderer.enabled = false;
-		appearParticles.Play();
-	}
-
-	public void StartFishing()
-	{
-		if (!isVisible) Appear();
-
-		isFishing = true;
-		timeTillJump = Time.time + 2f;
-
 		incomeParticles.Play();
 	}
 
-	public void StopFishing()
+	public override void PopOut()
 	{
-		isFishing = false;
+		base.PopOut();
 		incomeParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+		isVisible = false;
 	}
 }

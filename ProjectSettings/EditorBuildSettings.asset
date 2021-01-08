@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UI/Titlescreen.unity
     guid: 08064e202df8b3c4f8d89fc7480a0029
-  - enabled: 0
-    path: Assets/UI/Endscreen.unity
-    guid: bb3e8bf44ebf78244977de02ffb60307
   - enabled: 1
     path: Assets/Levels/2020 - 1 - Sovereign Nature/2020-1-SN Scene.unity
     guid: 9c572623dd25e4e4d9fb8aaaa7a3eba0

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 namespace Odyssey
 {
 	[RequireComponent(typeof(UIDocument))]
+	[RequireComponent(typeof(AudioSource))]
 	public class UIIngame : MonoBehaviour
 	{
 		// TODO: Get rid of demoSceneNameContainer
@@ -24,20 +25,20 @@ namespace Odyssey
 		// Info UI
 		VisualElement m_Info;
 
-		// Singleton
-		//public static UIIngame Instance { get; private set; }
+		// UI Audio
+		AudioSource audioSource;
+		[Header("Audio clips")]
+		[SerializeField] AudioClip click;
+		[SerializeField] AudioClip clickYes;
+		[SerializeField] AudioClip clickNo;
+		[SerializeField] AudioClip win;
+		[SerializeField] AudioClip lose;
 
 		#region MonoBehaviour methods
 
 		private void Awake()
 		{
-			//if (Instance != null)
-			//{
-			//	Destroy(this);
-			//	return;
-			//}
-
-			//Instance = this;
+			audioSource = GetComponent<AudioSource>();
 		}
 
 		private void OnEnable()
@@ -69,12 +70,21 @@ namespace Odyssey
 
 		private void ChoseYes()
 		{
-			if (GameManager.Instance) GameManager.Instance.MakeCoice1();
+			if (GameManager.Instance)
+			{
+				GameManager.Instance.MakeCoice1();
+				audioSource.PlayOneShot(clickYes);
+			}
 		}
 
 		private void ChoseNo()
 		{
-			if (GameManager.Instance) GameManager.Instance.MakeCoice2();
+			if (GameManager.Instance)
+			{
+				GameManager.Instance.MakeCoice2();
+				audioSource.PlayOneShot(clickNo);
+			}
+
 		}
 
 		public void Ask(string question)
@@ -96,16 +106,20 @@ namespace Odyssey
 			{
 				m_RealEnding.Q<Label>("label-final-message").text = finalMessage;
 				m_RealEnding.style.display = DisplayStyle.Flex;
+				audioSource.PlayOneShot(win);
 			}
 			else // false ending
 			{
 				m_FalseEnding.Q<Label>("label-final-message").text = finalMessage;
 				m_FalseEnding.style.display = DisplayStyle.Flex;
+				audioSource.PlayOneShot(lose);
 			}
 		}
 
 		private void InviteToMomentum()
 		{
+			m_RealEnding.style.display = DisplayStyle.None;
+			m_FalseEnding.style.display = DisplayStyle.None;
 			m_Info.style.display = DisplayStyle.Flex;
 			m_Question.style.display = DisplayStyle.Flex;
 			m_QuestionLabel.text = "Visit Odyssey Momemntum?";
@@ -116,6 +130,7 @@ namespace Odyssey
 
 		private void Share()
 		{
+			audioSource.PlayOneShot(click);
 			Application.OpenURL("https://twitter.com/");
 		}
 
@@ -126,11 +141,13 @@ namespace Odyssey
 
 		private void OpenMainMenu()
 		{
+			audioSource.PlayOneShot(click);
 			SceneManager.LoadScene("Titlescreen");
 		}
 
 		private void Restart()
 		{
+			audioSource.PlayOneShot(click);
 			SceneManager.LoadScene(demoSceneNameContainer.gameSceneName);
 		}
 
