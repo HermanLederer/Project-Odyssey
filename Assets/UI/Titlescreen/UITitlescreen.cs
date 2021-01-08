@@ -71,13 +71,7 @@ namespace Odyssey
 			SceneManager.LoadScene(demoSceneNameContainer.gameSceneName);
 		}
 
-		public void ExitGame() => StartCoroutine(PlayClickAndQuit());
+		public void ExitGame() => Application.Quit();
 
-		IEnumerator PlayClickAndQuit()
-		{
-			audioSource.PlayOneShot(click);
-			yield return new WaitForSeconds(click.length);
-			Application.Quit();
-		}
 	}
 }
