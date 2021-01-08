@@ -262,8 +262,8 @@ MonoBehaviour:
   spawnSound: {fileID: 8300000, guid: 685fe1699ff60ae4fb1c166ddd764241, type: 3}
   presenceLoop: {fileID: 0}
   hideOnStart: 0
-  sinSpeed: 0
-  flaotAmopunt: 0.1
+  sinSpeed: 1
+  flaotAmopunt: 0.04
 --- !u!1001 &1793569680677202074
 PrefabInstance:
   m_ObjectHideFlags: 0
